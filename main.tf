@@ -6,13 +6,6 @@ resource "aws_s3_bucket" "arm_state" {
     bucket = "arm-running"
     force_destroy = true
 
-    # Prevent accidental deletion of this S3 bucket
-    /*
-    lifecycle {
-        prevent_destroy = true
-    }
-    */
-
     # Enable versioning to see the full revision history of state files
     
     versioning {
